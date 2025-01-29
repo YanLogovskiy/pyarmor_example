@@ -1,0 +1,28 @@
+[project]
+name = 'ira.example'
+readme = 'README.md'
+requires-python = '>=3.10'
+dynamic = ['version', 'dependencies']
+
+
+[build-system]
+requires = ['setuptools>=43.0.0', 'wheel']
+build-backend = 'setuptools.build_meta'
+
+[tool.setuptools.packages.find]
+include = ['ira.example']
+
+[tool.setuptools.package-data]
+'ira.example' = [
+    '**/*.py', '**/.bev.yml', '**/*.hash', '**/*.config'
+]
+
+[tool.setuptools.dynamic]
+version = { attr = 'ira.example.__version__.__version__' }
+dependencies = { file = ['requirements.txt'] }
+
+[tool.isort]
+line_length = 120
+lines_after_imports = 2
+multi_line_output = 5
+combine_as_imports = true
