@@ -49,12 +49,15 @@ E   ModuleNotFoundError: No module named 'pyarmor_runtime_000000'
 Furthermore, you need to run pyarmor using the same python version as you app is using.
 Like this:
 ```shell
-<path_to_python> <path_to_pyarmor.py> obfuscate <script_to_obfuscate>
+<path_to_python> <path_to_pyarmor.py> obfuscate <script_to_obfuscate> [docs](https://pyarmor.readthedocs.io/en/latest/topic/obfuscated-script.html)
 ```
 But unfortunately, 
 ```shell
 ERROR    Python 3.11+ is not supported now
 ```
+There are some topic on github with related problems: 
+https://github.com/dashingsoft/pyarmor/issues/1574, 
+https://github.com/dashingsoft/pyarmor/issues/78
 
 #### Another way of obfuscation
 There is another mode pyarmor can work in: [RFT](https://pyarmor.readthedocs.io/en/latest/tutorial/advanced.html#using-rftmode-pro)
